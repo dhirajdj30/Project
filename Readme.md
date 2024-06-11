@@ -4,11 +4,13 @@ Inventory Management API implemented using Node.js and Express. The API allows f
 
 ## Installation
 
-    ```sh
-    npm install express body-parser
-    ```
+Clone the Project:
 
-Run above to download all dependencies.
+```sh
+npm install express body-parser
+```
+
+Above will download all dependencies.
 
 ## Running the Server
 
