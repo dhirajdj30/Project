@@ -24,7 +24,7 @@ The server will start on port 8080.
 
 # API Endpoints
 
-# 1. Add Item to Inventory
+## 1. Add Item to Inventory
 
 - **URL**: `/inventory/add`
 - **Method**: `POST`
@@ -37,7 +37,7 @@ The server will start on port 8080.
   ```
 - **Description**: Adds the specified quantity of the item to the inventory.
 
-# 2. Remove Item from Inventory
+## 2. Remove Item from Inventory
 
 - **URL**: `/inventory/remove`
 - **Method**: `POST`
@@ -50,7 +50,7 @@ The server will start on port 8080.
   ```
 - **Description**: Removes the specified quantity of the item from the inventory.
 
-# 3. Add Item to Cart
+## 3. Add Item to Cart
 
 - **URL**: `/cart/add`
 - **Method**: `POST`
@@ -64,7 +64,7 @@ The server will start on port 8080.
   ```
 - **Description**: Adds the specified quantity of the item to the customers cart.
 
-# 4. Apply Discount Coupon
+## 4. Apply Discount Coupon
 
 - **URL**: `/cart/discount`
 - **Method**: `POST`
@@ -77,7 +77,7 @@ The server will start on port 8080.
   ```
 - **Description**: Applies the specified discount coupon to the cart value and returns the discounted price.
 
-# Hard-Coded Discount Coupons
+### Hard-Coded Discount Coupons
 
 The following discount coupons are available:
 
@@ -86,7 +86,7 @@ The following discount coupons are available:
 - `BACKEND`: 7% discount, maximum discount cap of 90 Rs.
 - `EXPRESS`: 10% discount, maximum discount cap of 100 Rs.
 
-# Example Usage
+## Example Usage
 
 ### Adding an Item to Inventory
 
@@ -112,7 +112,9 @@ curl -X POST http://localhost:8080/cart/add -H "Content-Type: application/json" 
 curl -X POST http://localhost:8080/cart/discount -H "Content-Type: application/json" -d '{"cartValue":1000, "discountId":"DEVDYNAMIC"}'
 ```
 
-# SMALL PROJECT BY DHIRAJ JAGTAP
+## [LINK-TO-POSTMAN-COLLECTION](https://www.postman.com/galactic-moon-836078/workspace/chaman/collection/32883358-a37fb74b-921c-49ca-9752-d8e0cb2c58d1?action=share&creator=32883358)
+
+## SMALL PROJECT BY DHIRAJ JAGTAP
     
-# [GITHUB](https://github.com/dhirajdj30)
-# [LINKEDN](https://www.linkedin.com/in/dhiraj-jagtap-297a7322b/)
+## [GITHUB](https://github.com/dhirajdj30)
+## [LINKEDN](https://www.linkedin.com/in/dhiraj-jagtap-297a7322b/)
