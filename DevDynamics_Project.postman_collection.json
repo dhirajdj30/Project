@@ -1,0 +1,703 @@
+{
+	"info": {
+		"_postman_id": "a37fb74b-921c-49ca-9752-d8e0cb2c58d1",
+		"name": "DevDynamics_Project",
+		"description": "_**Please go through the examples in the API request.**_\n\nHello,\n\nI Dhiraj Jagtap have Developed the API endpoints for the Inventory Management Problem Where I have Following Works  \n**1\\. AddItemToInventory(productId, quantity):** This API will be used to add an item to the  \ninventory  \n**2\\. RemoveItemFromInventory(productId, quantity):** This API will be used to remove an item  \nfrom inventory.  \n**3\\. AddItemToCart(customerId, productId, quantity):** This API will be used by customers to  \nbuy items and add the items to the shopping cart. This API will check if the item is present in  \ninventory or not  \n**4\\. ApplyDiscountCoupon(cart value, discounted):** This API will be used to calculate the  \nDiscounted price of the overall cart.\n\nIn these, I have enjoyed developing and playing with the API calls.\n\nThank You, team DevDynamics for this opportunity.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32883358",
+		"_collection_link": "https://www.postman.com/galactic-moon-836078/workspace/chaman/collection/32883358-a37fb74b-921c-49ca-9752-d8e0cb2c58d1?action=share&source=collection_link&creator=32883358"
+	},
+	"item": [
+		{
+			"name": "Add Item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\": \"P1\" ,\r\n    \"quantity\":20\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/inventory/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"inventory",
+						"add"
+					]
+				},
+				"description": "TYPE: POST\n\nDESCRIPTION: Here API stores the new Product with its quantity.\n\nURL: [http://localhost:8080/inventory/add](http://localhost:8080/inventory/add)\n\nBODY: { \"productId\": \"P1\" , \"quantity\":20 }\n\nEXAMPLE RESPONSE: Item added to inventory successfully"
+			},
+			"response": [
+				{
+					"name": "Item Added",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": \"P1\",\r\n    \"quantity\": 20\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/inventory/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inventory",
+								"add"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "38"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"26-0AqsthWbd1efyParbIwpPdwydjg\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Jun 2024 19:45:55 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Item added to inventory successfully  "
+				}
+			]
+		},
+		{
+			"name": "Remove",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\":\"P1\",\r\n     \"quantity\": 25\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/inventory/remove",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"inventory",
+						"remove"
+					]
+				},
+				"description": "TYPE: POST\n\nDESCRIPTION: Here API removes Products as per quantity.\n\nURL: [http://localhost:8080/inventory/remove](http://localhost:8080/inventory/add)\n\nBODY: { \"productId\": \"P1\" , \"quantity\":20 }\n\nEXAMPLE RESPONSE: Item added to inventory successfully"
+			},
+			"response": [
+				{
+					"name": "RemovedSuccess",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\":\"P1\",\r\n     \"quantity\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/inventory/remove",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inventory",
+								"remove"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "40"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"28-0yvfvcZIQCVqeqlXtxqcxgjUWOI\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Jun 2024 19:58:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Item removed from inventory successfully"
+				},
+				{
+					"name": "RemovedUnsucces",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\":\"c1\",\r\n     \"quantity\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/inventory/remove",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inventory",
+								"remove"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "27"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1b-dXgtnOAlPDROBpxJzIvMOO+obss\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Jun 2024 20:00:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Item not found in inventory"
+				},
+				{
+					"name": "Insufficient Items",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\":\"P1\",\r\n     \"quantity\": 25\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/inventory/remove",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inventory",
+								"remove"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "34"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"22-EhxBEVZzk+wQQ/sSLzuOnNpvkl4\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Jun 2024 20:02:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Insufficient quantity in inventory"
+				}
+			]
+		},
+		{
+			"name": "Add to Cart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerId\": \"CUST1\",\r\n    \"productId\":\"P2\",\r\n    \"quantity\":5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cart/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cart",
+						"add"
+					]
+				},
+				"description": "TYPE: POST\n\nDESCRIPTION: Here API removes Products as per quantity.\n\nURL: [http://localhost:8080/cart/add](http://localhost:8080/inventory/add)\n\nEXAMPLE RESPONSE: Item added to inventory successfully"
+			},
+			"response": [
+				{
+					"name": "Item add to cart Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\": \"CUST1\",\r\n    \"productId\":\"P1\",\r\n    \"quantity\":5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cart/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cart",
+								"add"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "31"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1f-/03moQwCTEmkQtnyZM/Uw7uLD+Y\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Jun 2024 20:15:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Item added to cart successfully"
+				},
+				{
+					"name": "Insufficient to add to cart",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\": \"CUST1\",\r\n    \"productId\":\"P1\",\r\n    \"quantity\":20\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cart/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cart",
+								"add"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "34"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"22-EhxBEVZzk+wQQ/sSLzuOnNpvkl4\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Jun 2024 20:19:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Insufficient quantity in inventory"
+				},
+				{
+					"name": "Item not found",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\": \"CUST1\",\r\n    \"productId\":\"P2\",\r\n    \"quantity\":5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cart/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cart",
+								"add"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "27"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1b-dXgtnOAlPDROBpxJzIvMOO+obss\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Jun 2024 20:20:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Item not found in inventory"
+				}
+			]
+		},
+		{
+			"name": "Apply Discount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cartValue\": 2000 \r\n    ,\"discountId\":\"DEVDYNAMIC\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cart/discount",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cart",
+						"discount"
+					]
+				},
+				"description": "TYPE: POST\n\nDESCRIPTION: Here API removes Products as per quantity.\n\nURL: [http://localhost:8080/cart/dicount](http://localhost:8080/inventory/add)\n\nBODY: {  \n\"cartValue\": 2000  \n,\"discount\":\"DEVDYNAMIC\"  \n}\n\nEXAMPLE RESPONSE: 1750"
+			},
+			"response": [
+				{
+					"name": "Coupon Not Found",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cartValue\": 2000 \r\n    ,\"discountId\":\"DEVDYNAMICS\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cart/discount",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cart",
+								"discount"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "25"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"19-HdzT03WKtQ5suD+BYGyPR4IkWhE\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Jun 2024 20:23:35 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Discount coupon not found"
+				},
+				{
+					"name": "Applied Discount",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cartValue\": 2000 \r\n    ,\"discountId\":\"DEVDYNAMIC\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cart/discount",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cart",
+								"discount"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "15"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f-PZg02alIu3BBH915FecqYcICIsk\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Jun 2024 20:24:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": 1750\n}"
+				}
+			]
+		}
+	]
+}
