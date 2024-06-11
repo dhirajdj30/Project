@@ -3,10 +3,12 @@
 Inventory Management API implemented using Node.js and Express. The API allows for adding, removing items from inventory, adding items to a customer's cart, and applying discount coupons.
 
 ## Installation
+
     ```sh
     npm install express body-parser
     ```
-    Run above to download all dependencies.
+
+Run above to download all dependencies.
 
 ## Running the Server
 
